@@ -50,9 +50,6 @@ To get a local copy up and running, follow these steps:
 
 If you'd like to contribute to this project, please fork the repository and submit a pull request. Make sure to adhere to the coding standards and include relevant tests.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 

@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+}
+.container {
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100vh;
+  width: 100%;
+  padding-top: 50px;
+  align-items: center;
+  
+}
+.container h1 {
+  font-size: 10vw;
+  background: linear-gradient(
+    to right,
+    rgb(228, 225, 225),
+    rgb(44, 166, 172),
+    rgb(209, 20, 197)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: cursive;
+}
+.container h2 {
+  font-size: 5vw;
+  color: rgba(245, 245, 245, 0.604);
+  font-family: cursive;
+}
+
+.prompt-area {
+  width: 100%;
+  height: 120px;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#prompt {
+  width: 60%;
+  height: 50%;
+  padding: 15px;
+  outline: none;
+  border: none;
+  border-radius: 30px 0px 0px 30px;
+  /* background-color: rgb(0, 0, 0)0, 27, 27;
+box-shadow: inset 2px 2px 10px black, inset -2px -4px 10px black; */
+  font-size: 18px;
+  border: 2px solid gray;
+  border-right: none;
+}
+
+#btn {
+  width: 10%;
+  height: 50%;
+  border-radius: 0px 30px 30px 0px;
+  background-color: white;
+  cursor: pointer;
+  background-color: rgb(116, 186, 203);
+  outline: none;
+  border: none;
+  border: 2px solid gray;
+  border-left: none;
+}
+#btn:hover {
+  background-color: rgb(89, 171, 191);
+  transition: 0.5s all ease;
+}
+
+.chat-container {
+  width: 100%;
+  color: rgba(240, 248, 255, 0.791);
+  max-height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.user-chat-box {
+  width: 70%;
+  padding: 10px;
+  display: flex;
+  background-color: rgb(85, 133, 145);
+  border-radius: 30px 30px 0px 30px;
+  /* justify-content: center;
+    align-items: center; */
+}
+.ai-chat-box {
+  width: 70%;
+  padding: 10px;
+  display: flex;
+  background-color: rgb(40, 38, 38);
+  border-radius: 30px 30px 30px 0px;
+}
+
+.img {
+  width: 80px;
+  height: 100%;
+}
+
+
+/* From Uiverse.io by Li-Deheng */ 
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --color: hsl(0, 0%, 87%);
+    --animation: 2s ease-in-out infinite;
+  }
+  
+  .loader .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 5px;
+    height: 5px;
+    border: solid 2px var(--color);
+    border-radius: 50%;
+    margin: 0 8px;
+    background-color: transparent;
+    animation: circle-keys var(--animation);
+  }
+  
+  .loader .circle .dot {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--color);
+    animation: dot-keys var(--animation);
+  }
+  
+  .loader .circle .outline {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    animation: outline-keys var(--animation);
+  }
+  
+  .circle:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  
+  .circle:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  .circle:nth-child(4) {
+    animation-delay: 0.9s;
+  }
+  
+  .circle:nth-child(5) {
+    animation-delay: 1.2s;
+  }
+  
+  .circle:nth-child(2) .dot {
+    animation-delay: 0.3s;
+  }
+  
+  .circle:nth-child(3) .dot {
+    animation-delay: 0.6s;
+  }
+  
+  .circle:nth-child(4) .dot {
+    animation-delay: 0.9s;
+  }
+  
+  .circle:nth-child(5) .dot {
+    animation-delay: 1.2s;
+  }
+  
+  .circle:nth-child(1) .outline {
+    animation-delay: 0.9s;
+  }
+  
+  .circle:nth-child(2) .outline {
+    animation-delay: 1.2s;
+  }
+  
+  .circle:nth-child(3) .outline {
+    animation-delay: 1.5s;
+  }
+  
+  .circle:nth-child(4) .outline {
+    animation-delay: 1.8s;
+  }
+  
+  .circle:nth-child(5) .outline {
+    animation-delay: 2.1s;
+  }
+  
+  @keyframes circle-keys {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  
+    50% {
+      transform: scale(1.5);
+      opacity: 0.5;
+    }
+  
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes dot-keys {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(0);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes outline-keys {
+    0% {
+      transform: scale(0);
+      outline: solid 20px var(--color);
+      outline-offset: 0;
+      opacity: 1;
+    }
+  
+    100% {
+      transform: scale(1);
+      outline: solid 0 transparent;
+      outline-offset: 20px;
+      opacity: 0;
+    }
+  }
